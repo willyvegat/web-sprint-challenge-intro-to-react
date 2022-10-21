@@ -88,4 +88,4 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 - It is data passed from parent to child.
 
 4. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
-- 
+- Side effects are data fetching, setting up a subscription and manually changing the DOM in React Components. By using the hook useEffect you tell React that your component needs to do something after render.
