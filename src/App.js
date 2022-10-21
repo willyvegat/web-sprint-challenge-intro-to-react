@@ -14,9 +14,21 @@ const [characters, setCharacters] = useState([]);
   // sync up with, if any.
 
   useEffect(() => {
-    axios.get(`https://swapi.dev/api/people/`)
+    axios.get("https://swapi.dev/api/people/")
       .then(res => {
         console.log(res.data);
+
+        // const dataArr = Object.values(res.data);
+        // console.log(dataArr);
+
+
+        // const charactersArr = dataArr.flat()
+        // console.log(charactersArr);
+
+        // setCharacters(dataArr);
+
+        setCharacters(res.data);
+
       }).catch(err => console.error(err));
   }, [])
 
