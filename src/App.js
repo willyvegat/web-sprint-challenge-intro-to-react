@@ -2,6 +2,13 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 import Character from "./components/Character";
+import styled from "styled-components";
+
+const StyledHeader = styled.h1`
+  color: #443e3e;
+  text-shadow: 1px 1px 5px #fff;
+  font-size: 5rem;
+`
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -22,7 +29,7 @@ const [characters, setCharacters] = useState([]);
 
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
+      <StyledHeader className="Header">REACT WARS</StyledHeader>
       <Character characters={characters} />
     </div>
   );
